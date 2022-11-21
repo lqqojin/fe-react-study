@@ -9,13 +9,7 @@ export default function AppMentor() {
       title: '시니어개발자',
     },
   });
-
-  // useEffect(() => {
-  //   return () => {
-  //     console.log('정리');
-  //   };
-  // }, [person]);
-
+  
   return (
     <div>
       <h1>
