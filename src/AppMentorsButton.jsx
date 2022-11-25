@@ -2,8 +2,8 @@ import React, { useReducer } from 'react';
 import personReducer from './reducer/person-reducer';
 
 export default function AppMentors() {
-  // const [person, setPerson] = useState(initialPerson);
   const [person, dispatch] = useReducer(personReducer, initialPerson);
+  
   const handleUpdate = () => {
     const prev = prompt(`누구의 이름을 바꾸고 싶은가요?`);
     const current = prompt(`이름을 무엇으로 바꾸고 싶은가요?`);
@@ -21,7 +21,7 @@ export default function AppMentors() {
   return (
     <div>
       <h1>
-        {person.name}는 {person.title}
+        {person.chapter}: {person.name}는 {person.title}
       </h1>
       <p>{person.name}의 멘토는:</p>
       <ul>
@@ -31,12 +31,29 @@ export default function AppMentors() {
           </li>
         ))}
       </ul>
-      <button onClick={handleUpdate}>멘토의 이름을 바꾸기</button>
-      <button onClick={handleDelete}>멘토 삭제</button>
-      <button onClick={handleAdd}>멘토 추가</button>
+      <Button text='멘토의 이름을 바꾸기' onClick={handleUpdate} />
+      <Button text='멘토 삭제' onClick={handleDelete} />
+      <Button text='멘토 추가' onClick={handleAdd} />
     </div>
   );
 }
+
+const Button = ({ text, onClick }) => {
+  console.log('Button', text, 're-rendering');
+  return (
+    <button
+      onClick={onClick}
+      style={{
+        backgroundColor: 'black',
+        color: 'white',
+        borderRadius: '20px',
+        margin: '0.4rem',
+      }}
+    >
+      {text}
+    </button>
+  );
+};
 
 const initialPerson = {
   chapter: 'AppMentorsImmer',

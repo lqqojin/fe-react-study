@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import AppCard from './AppCard';
-import AppTheme from './AppTheme';
+// import AppTheme from './AppTheme';
+import AppMentorsButton from './AppMentorsButton'; // 5.19~20 성능
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppTheme />
+    <AppMentorsButton />
   </React.StrictMode>,
 );
 

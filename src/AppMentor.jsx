@@ -9,11 +9,11 @@ export default function AppMentor() {
       title: '시니어개발자',
     },
   });
-  
+
   return (
     <div>
       <h1>
-        {person.name}는 {person.title}
+        {person.chapter}: {person.name}는 {person.title}
       </h1>
       <p>
         {person.name}의 멘토는 {person.mentor.name} ({person.mentor.title})
