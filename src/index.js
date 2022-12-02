@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import AppCard from './AppCard';
 // import AppTheme from './AppTheme';
-import AppMentorsButton from './AppMentorsButton'; // 5.19~20 성능
+import AppProducts from './basic/AppProducts'; // 5.21~22 로딩, 에러 상태 추가
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppMentorsButton />
+    <AppProducts />
   </React.StrictMode>,
 );
 
