@@ -4,7 +4,6 @@ import { DarkModeContext, DarkModeProvider } from './context/DarkModeContext';
 
 export default function AppTheme() {
   return (
-    // <h1>HI</h1>
     <>
       <DarkModeProvider>
         <Header />
@@ -14,7 +13,6 @@ export default function AppTheme() {
     </>
   );
 }
-//
 const Header = () => {
   return <header className='header'>Header</header>;
 };
