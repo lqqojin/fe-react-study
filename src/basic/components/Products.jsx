@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import useProducts from '../../hooks/use-products';
+import useProducts from '../hooks/use-products';
 
 export default function Products() {
   const [count, setCount] = useState(0);
